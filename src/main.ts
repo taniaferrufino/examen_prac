@@ -14,7 +14,7 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true,
       forbidNonWhitelisted: true,
-      transform: true
+      transform: true, // Transforma los payloads a los tipos del DTO
     }),
   );
 
@@ -33,6 +33,6 @@ async function bootstrap() {
   console.log(`API ejecutándose en el puerto: ${port}`);
   console.log(`Documentación disponible en: /api/docs`);
 
-  await app.listen(process.env.PORT ?? 3000);
+
 }
 bootstrap();
